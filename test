@@ -1,0 +1,7 @@
+   18  sudo apt-get install virtualbox
+   19  sudo apt-get install vagrant
+   20  sudo apt-get install virtualbox-dkms
+   21  vagrant box add trusty64 http://files.vagrantup.com/trusty64.box
+   22  vagrant init ubuntu/trusty64
+   23  vagrant box add ubuntu/trusty64 
+

@@ -24,5 +24,13 @@ $ vagrant box add trusty64 http://files.vagrantup.com/trusty64.box
 $ vagrant init
 ```
 
+### References
+* [#Sysadmincasts dot com] [url]
+
+
+
+
+
 
 [vagrant]: <http://www.vagrantbox.es/>
+[url]: <https://sysadmincasts.com/episodes/45-learning-ansible-with-vagrant-part-2-4>

@@ -20,7 +20,7 @@ $ sudo apt-get install virtualbox-dkms
 * Get the image url from [#Vagrantbox dot es] [vagrant]
 * Add the image
 ```sh
-$ vagrant box add trusty64 http://files.vagrantup.com/trusty64.box
+$ vagrant box add trusty64 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 $ vagrant init
 ```
 

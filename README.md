@@ -1,4 +1,5 @@
 # DEV environment
+Using for testing pipeline multi-branches
 
 # Vagrant
 I use vagrant with provider virtual box, we could also use with other provider vmware

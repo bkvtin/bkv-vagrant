@@ -1,0 +1,12 @@
+---
+# defaults file for provision/roles/hello_web
+nfs:
+  docroot: /var/www/html
+  export_file: /etc/exports
+  package: 
+    - nfs-utils 
+  service: httpd
+  shared_path: /bkv  
+  shared_name:
+    - vol01
+    - vol02

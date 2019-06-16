@@ -1,0 +1,12 @@
+---
+- name: start nfs
+  sudo: yes
+  command: systemctl start nfs-server rpcbind
+
+- name: enable nfs
+  sudo: yes
+  command: systemctl enable nfs-server rpcbind
+
+- name: export shared folder
+  sudo: yes
+  command: exportfs -r

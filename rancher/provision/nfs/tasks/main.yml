@@ -1,0 +1,28 @@
+---
+- name: Ensure NFS utilities are installed.
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ nfs.package }}"
+  notify:
+    - start nfs
+    - enable nfs
+
+- name: Create shared dir
+  file:
+    path: "{{ nfs.shared_path }}/{{ item }}"
+    state: directory
+    mode: '0777'
+  with_items:
+    - "{{ nfs.shared_name }}"
+
+- name: Export file
+  lineinfile:
+    path: "{{ nfs.export_file }}"
+    line: "{{ nfs.shared_path }}/{{ item }} 10.0.2.0/24(rw,sync,no_root_squash)"
+    create: yes
+  with_items:
+    - "{{ nfs.shared_name }}"
+  notify:
+    - export shared folder

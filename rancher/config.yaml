@@ -1,0 +1,24 @@
+admin_password: admin
+version: latest
+ROS_version: 1.5.1
+# Empty defaults to latest non-experimental available
+k8s_version: ""
+server:
+  cpus: 1
+  memory: 1500
+node:
+  count: 1
+  cpus: 1
+  memory: 1500
+nfs:
+  cpus: 1
+  memory: 1024
+ip:
+  master: 172.22.101.100
+  server: 172.22.101.101
+  node:   172.22.101.111
+  nfs:    172.22.101.112
+linked_clones: true
+net:
+  private_nic_type: 82545EM
+  network_type: private_network
